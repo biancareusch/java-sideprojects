@@ -150,45 +150,72 @@ public class basicExercises {
 //        System.out.print('\n');
 
         //other solution:
-        String b1, b2;
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter 1st binary number: ") ;
-        b1 = scanner.next();
-        System.out.print("Enter 2nd binary number: ") ;
-        b2 = scanner.next();
-        int n1 = Integer.parseInt(b1, 2);
-        int n2 = Integer.parseInt(b2, 2);
-        int sumUp = n1 + n2;
-        String result = Integer.toBinaryString(sumUp);
-        System.out.println("Sum of two binary numbers: " + result);
+//        String b1, b2;
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter 1st binary number: ") ;
+//        b1 = scanner.next();
+//        System.out.print("Enter 2nd binary number: ") ;
+//        b2 = scanner.next();
+//        int n1 = Integer.parseInt(b1, 2);
+//        int n2 = Integer.parseInt(b2, 2);
+//        int sumUp = n1 + n2;
+//        String result = Integer.toBinaryString(sumUp);
+//        System.out.println("Sum of two binary numbers: " + result);
 
 
 
         //32
-        Scanner scan = new Scanner(System.in);
-        System.out.print("\nThis program will take in two numbers and compare them");
-        System.out.print("\nFirst number: ");
-        int compare1 = scan.nextInt();
-        System.out.print("\nSecond number: ");
-        int compare2 = scan.nextInt();
-        if(compare1 < compare2){
-            System.out.print("\n" + compare1 + " < " + compare2);
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("\nThis program will take in two numbers and compare them");
+//        System.out.print("\nFirst number: ");
+//        int compare1 = scan.nextInt();
+//        System.out.print("\nSecond number: ");
+//        int compare2 = scan.nextInt();
+//        if(compare1 < compare2){
+//            System.out.print("\n" + compare1 + " < " + compare2);
+//        }
+//        if(compare1 <= compare2){
+//            System.out.print("\n" + compare1 + " <= " + compare2);
+//        }
+//        if(compare1 > compare2){
+//            System.out.print("\n" + compare1 + " > " + compare2);
+//        }
+//        if(compare1 >= compare2){
+//            System.out.print("\n" + compare1 + " >= " + compare2);
+//        }
+//        if(compare1 == compare2){
+//            System.out.print("\n" + compare1 + " = " + compare2);
+//        }
+//        if(compare1 != compare2){
+//            System.out.print("\n" + compare1 + " != " + compare2);
+//        }
+
+
+
+        //33
+        System.out.print("\nThis program will take in a number and return the sum of its digits");
+        Scanner addDig = new Scanner(System.in);
+        System.out.print("\nYour number: ");
+        int digit = addDig.nextInt();
+        int digitSum = 0;
+        while(digit != 0){
+
+            //get the last digit of number, for example        123 % 10 = 3;
+            //get the last digit of number, which now is 12 by 12 % 10 = 3;
+            //                                                 1  % 10 = 1;
+            int remainder = digit % 10;
+
+            //add modulus result 3 to empty variable
+            //add remainder      2 to 3 = 5;
+            //add remainder      1 to 5 = 6;
+            digitSum = digitSum + remainder;
+
+            //remove remainder from digit by 123 / 10 = 12
+            //                               12  / 10 = 1
+            //                               1   / 10 = 0 (loop ends bc (digit == 0);
+            digit = digit/10;
         }
-        if(compare1 <= compare2){
-            System.out.print("\n" + compare1 + " <= " + compare2);
-        }
-        if(compare1 > compare2){
-            System.out.print("\n" + compare1 + " > " + compare2);
-        }
-        if(compare1 >= compare2){
-            System.out.print("\n" + compare1 + " >= " + compare2);
-        }
-        if(compare1 == compare2){
-            System.out.print("\n" + compare1 + " = " + compare2);
-        }
-        if(compare1 != compare2){
-            System.out.print("\n" + compare1 + " != " + compare2);
-        }
+       System.out.print("\nThe sum of its digits = " + digitSum);
     }
 }
