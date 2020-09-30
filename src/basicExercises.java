@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class basicExercises {
     public static void main(String[] args) {
@@ -56,12 +57,35 @@ public class basicExercises {
 
         //7
         Scanner multiplier = new Scanner(System.in);
-        System.out.print("\nThis programm will take in a number and give you its multiplication table up to 10");
-        System.out.print("\nInput your number here: ");
+        System.out.println("\nThis programm will take in a number and give you its multiplication table up to 10");
+        System.out.println("Input your number here: ");
         int multiplierNum = multiplier.nextInt();
         for(int i = 0; i < 11;i++){
             System.out.format("\n" + multiplierNum + " x " + i +" = " + (multiplierNum * i));
         }
 
+        //8
+        System.out.print("\n");
+        System.out.println("     J       a       v       v       a");
+        System.out.println("     J     a   a      v     v      a   a");
+        System.out.println("J    J    aaaaaaa      v   v      aaaaaaa");
+        System.out.println(" JJJJ    a       a       V       a       a");
+
+        //9
+        double express = ((25.5 * 3.5 - 3.5 * 3.5)/(40.5 - 4.5));
+        System.out.print("\n" + express);
+
+        //10
+        double specific = 4.0 * (1 - (1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11));
+        System.out.format("\n" + specific);
+
+        //11
+        double pi = 3.14159;
+        double radius = 7.5;
+        double perimeter = 2 * pi * radius;
+        double area = pi * Math.pow(radius,2) ;
+        System.out.format("\n\n Area: " + area + "\nPerimeter: " + perimeter);
+
+        //12
     }
 }
