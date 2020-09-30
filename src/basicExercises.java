@@ -98,7 +98,56 @@ public class basicExercises {
         int average = (numberOne + numberTwo + numberThree) / 3;
         System.out.println("Here's your average: " + average);
 
-        //13
+        //15
+        int a, b, temp;
+        a = 50;
+        b = 10;
+        System.out.println("\n Before swapping variables: a,b = " + a + "," + b);
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println(" After swapping variables: a,b = " + a + "," + b);
+
+        //16 Add binary numbers
+        long binary1, binary2;
+        int i = 0;
+        int remain = 0;
+        //declare Array with int[], new int [20] declares array length
+        int[] sumArray = new int [20];
+
+        //get input
+        Scanner in = new Scanner(System.in);
+        System.out.print("\n\nThis program will print the sum of two binary numbers");
+        System.out.println("\nInput first binary number: ");
+        binary1 = in.nextLong();
+        System.out.println("Input second binary number: ");
+        binary2 = in.nextLong();
+
+        //example binary1: 0000101
+        //example binary2: 0001001
+
+        while(binary1 != 0 || binary2 != 0){
+            //narrowing casting to (int) binaries lose their leading zero's so binary1 = 101, binary2 = 1001
+            //sum array indexof 1=(101 %10 = 1  + (1001 %10=)1 +  0)    % 2 = 0
+            sumArray[i++] = (int)((binary1 % 10 + binary2 % 10 + remain)% 2);
+            //remain =    ((101 %10 =) 1 + (1001 %10=)1 +  0      / 2 = 1
+            remain = (int)((binary1 % 10 + binary2 % 10 + remain) / 2);
+//          binary1 = 101/10 = 10 r1
+            binary1 = binary1 /10;
+            //binary2 = 1001/10 = 100 r1
+            binary2 = binary2 / 10;
+        }
+//
+        if(remain != 0){
+            sumArray[i++] = remain;
+        }
+        --i;
+
+        System.out.print("Sum of two binary numbers: ");
+        while(i >= 0){
+            System.out.print(sumArray[i--]);
+        }
+        System.out.print('\n');
 
     }
 }
