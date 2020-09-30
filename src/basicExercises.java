@@ -166,30 +166,30 @@ public class basicExercises {
 
 
         //32
-//        Scanner scan = new Scanner(System.in);
-//        System.out.print("\nThis program will take in two numbers and compare them");
-//        System.out.print("\nFirst number: ");
-//        int compare1 = scan.nextInt();
-//        System.out.print("\nSecond number: ");
-//        int compare2 = scan.nextInt();
-//        if(compare1 < compare2){
-//            System.out.print("\n" + compare1 + " < " + compare2);
-//        }
-//        if(compare1 <= compare2){
-//            System.out.print("\n" + compare1 + " <= " + compare2);
-//        }
-//        if(compare1 > compare2){
-//            System.out.print("\n" + compare1 + " > " + compare2);
-//        }
-//        if(compare1 >= compare2){
-//            System.out.print("\n" + compare1 + " >= " + compare2);
-//        }
-//        if(compare1 == compare2){
-//            System.out.print("\n" + compare1 + " = " + compare2);
-//        }
-//        if(compare1 != compare2){
-//            System.out.print("\n" + compare1 + " != " + compare2);
-//        }
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\nThis program will take in two numbers and compare them");
+        System.out.print("\nFirst number: ");
+        int compare1 = scan.nextInt();
+        System.out.print("\nSecond number: ");
+        int compare2 = scan.nextInt();
+        if(compare1 < compare2){
+            System.out.print("\n" + compare1 + " < " + compare2);
+        }
+        if(compare1 <= compare2){
+            System.out.print("\n" + compare1 + " <= " + compare2);
+        }
+        if(compare1 > compare2){
+            System.out.print("\n" + compare1 + " > " + compare2);
+        }
+        if(compare1 >= compare2){
+            System.out.print("\n" + compare1 + " >= " + compare2);
+        }
+        if(compare1 == compare2){
+            System.out.print("\n" + compare1 + " = " + compare2);
+        }
+        if(compare1 != compare2){
+            System.out.print("\n" + compare1 + " != " + compare2);
+        }
 
 
 
@@ -218,6 +218,7 @@ public class basicExercises {
         }
        System.out.print("\nThe sum of its digits = " + digitSum);
 
+
         //37
         System.out.print("\nThis program will take in any String and reverse it");
         Scanner reverseString = new Scanner(System.in);
@@ -229,7 +230,5 @@ public class basicExercises {
         for (int x = letter.length - 1; x >=0; x--){
             System.out.print(letter[x]);
         }
-
-
     }
 }
