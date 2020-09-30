@@ -217,5 +217,16 @@ public class basicExercises {
             digit = digit/10;
         }
        System.out.print("\nThe sum of its digits = " + digitSum);
+
+        //37
+        System.out.print("\nThis program will take in any String and reverse it");
+        Scanner reverseString = new Scanner(System.in);
+        System.out.print("\nYour String: ");
+        char[] letter = reverseString.nextLine().toCharArray();
+        System.out.print("\nReverse string: ");
+        for (int x = letter.length - 1; x >=0; x--){
+            System.out.print(letter[x]);
+        }
+
     }
 }
