@@ -84,8 +84,21 @@ public class basicExercises {
         double radius = 7.5;
         double perimeter = 2 * pi * radius;
         double area = pi * Math.pow(radius,2) ;
-        System.out.format("\n\n Area: " + area + "\nPerimeter: " + perimeter);
+        System.out.format("\n\nArea: " + area + "\nPerimeter: " + perimeter);
 
         //12
+        Scanner averageSC = new Scanner(System.in);
+        System.out.println("\n\nThis program will take in three number and print out the average.");
+        System.out.println(" Number one: ");
+        int numberOne = averageSC.nextInt();
+        System.out.println(" Number two: ");
+        int numberTwo = averageSC.nextInt();
+        System.out.println(" Number three: ");
+        int numberThree = averageSC.nextInt();
+        int average = (numberOne + numberTwo + numberThree) / 3;
+        System.out.println("Here's your average: " + average);
+
+        //13
+
     }
 }
