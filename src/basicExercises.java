@@ -53,5 +53,15 @@ public class basicExercises {
         System.out.format("\n" + firstNum + " / " + secondNum + " = " + divisionNum);
         int remainder = firstNum % secondNum;
         System.out.format("\n" + firstNum + " mod " + secondNum + " = " + subtraction);
+
+        //7
+        Scanner multiplier = new Scanner(System.in);
+        System.out.print("\nThis programm will take in a number and give you its multiplication table up to 10");
+        System.out.print("\nInput your number here: ");
+        int multiplierNum = multiplier.nextInt();
+        for(int i = 0; i < 11;i++){
+            System.out.format("\n" + multiplierNum + " x " + i +" = " + (multiplierNum * i));
+        }
+
     }
 }
