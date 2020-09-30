@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class basicExercises {
     public static void main(String[] args) {
 //        W3 Java Basic Programming Exercises
 //
@@ -27,15 +27,31 @@ public class main {
         System.out.print("\n" + fourth);
 
         //5
-        Scanner sc = new Scanner(System.in);
-        System.out.print("\nThis program will let you input two numbers and return the product of these numbers");
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("\nThis program will let you input two numbers and return the product of these numbers");
+//        System.out.print("\n First number: ");
+//        int firstPro = sc.nextInt();
+//        System.out.print("\n Second number: ");
+//        int secondPro = sc.nextInt();
+//        int product = firstPro * secondPro;
+//        System.out.format("\n" + firstPro + " x " + secondPro + " = " + product );
+
+        //6
+        Scanner scan = new Scanner(System.in);
+        System.out.print("\nThis program will let you input two numbers and add, subtract, multiply, divide and give you the remainder of these numbers");
         System.out.print("\n First number: ");
-        int firstPro = sc.nextInt();
+        int firstNum = scan.nextInt();
         System.out.print("\n Second number: ");
-        int secondPro = sc.nextInt();
-        int product = firstPro * secondPro;
-        System.out.format("\n" + firstPro + " x " + secondPro + " = " + product );
-
-
+        int secondNum = scan.nextInt();
+        int addition = firstNum + secondNum;
+        System.out.format("\n" + firstNum + " + " + secondNum + " = " + addition);
+        int subtraction = firstNum - secondNum;
+        System.out.format("\n" + firstNum + " - " + secondNum + " = " + subtraction);
+        int productNum = firstNum * secondNum;
+        System.out.format("\n" + firstNum + " x " + secondNum + " = " + productNum );
+        int divisionNum = firstNum / secondNum;
+        System.out.format("\n" + firstNum + " / " + secondNum + " = " + divisionNum);
+        int remainder = firstNum % secondNum;
+        System.out.format("\n" + firstNum + " mod " + secondNum + " = " + subtraction);
     }
 }
