@@ -1,16 +1,40 @@
 package musical;
 
 public class MusicTest {
-    private static Tuneable tuneableObj;
-    private static VolumeAdjustable va;
+//    private static Tuneable tuneableObj;
+//    private static VolumeAdjustable va;
 
     public static void main(String[] args) {
 
-        Tuneable firstPiano = new Piano("strings", 60);
-        VolumeAdjustable firstSax = new Sax("brass", "baritone");
+        MusicalInstrument firstPiano = new Piano("strings", 60);
+        Tuneable firstSax = new Sax("brass", "baritone");
+        VolumeAdjustable volPiano = new Piano("strings", 90);
+        Piano allPiano = new Piano("strings",45);
+
+        //firstPiano of the type MusicalInstrument can access the implementations of class MusicalInstrument(playable)
+        firstPiano.getInstrumentClassification();
+        firstPiano.setInstrumentClassification("something");
+        firstPiano.startMusic();
+        firstPiano.stopMusic();
 
 
-        firstPiano.tuneInstrument();
+        //firstSax of type Tuneable has the implementations made in Sax class to access the tune methods
+        firstSax.tuneInstrument();
+        firstSax.detuneInstrument();
+
+        //volPiano of type VolumeAdjustable can access the pianos implementations of the interface volumeAdjustables' method
+        volPiano.volumeUp();
+        volPiano.volumeDown();
+
+        //allPiano of type Piano can access all interfaces because it inherits playable from musicalInstruments
+        // and its own implementation of tuneable and volumeadjustable
+        allPiano.volumeUp();
+        allPiano.volumeDown();
+        allPiano.tuneInstrument();
+        allPiano.detuneInstrument();
+        allPiano.startMusic();
+        allPiano.stopMusic();
+
 
 
 //      Create an abstract class called ```MusicalInstrument``` that implements a ```Playable``` interface.
